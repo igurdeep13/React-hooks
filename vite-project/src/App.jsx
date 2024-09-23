@@ -1,20 +1,24 @@
-import React, { useEffect, useState, useRef, useMemo } from "react";
-import Header from "./Components/Header";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useMemo,
+  useReducer,
+  useLayoutEffect,
+} from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  useEffect(() => {
+    console.log("Message from useEffect");
+  }, []);
+  useLayoutEffect(() => {
+    console.log("Message from useLayout");
+  }, []);
   return (
     <>
-      <Header />
-      <h1>{count}</h1>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Click Here
-      </button>
+      {setTimeout(() => {
+        <h2>Test Message</h2>;
+      }, 3000)}
     </>
   );
 }
