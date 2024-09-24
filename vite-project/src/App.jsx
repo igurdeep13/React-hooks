@@ -1,26 +1,12 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  useMemo,
-  useReducer,
-  useLayoutEffect,
-} from "react";
+import React, { useState } from "react";
 
 function App() {
-  useEffect(() => {
-    console.log("Message from useEffect");
-  }, []);
-  useLayoutEffect(() => {
-    console.log("Message from useLayout");
-  }, []);
-  return (
-    <>
-      {setTimeout(() => {
-        <h2>Test Message</h2>;
-      }, 3000)}
-    </>
-  );
+  const [color, changeColor] = useState("red")
+
+  return <>
+    <h1>My fav color is {color}!</h1>
+    <button onClick={()=>{changeColor("blue")}}>Blue</button>
+  </>
 }
 
 export default App;
