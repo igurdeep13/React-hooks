@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
 function App() {
-  const [color, changeColor] = useState("red")
+  const [car, setCar] = useState({
+    make : "ferrari",
+    model: "roma",
+    year: "2009",
+    color: "red"
+  });
 
   return <>
-    <h1>My fav color is {color}!</h1>
-    <button onClick={()=>{changeColor("blue")}}>Blue</button>
+    <h1>My fav Car is {car.make} {car.model}</h1>
+    
   </>
 }
 
