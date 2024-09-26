@@ -107,18 +107,59 @@
 
 // export default App;
 
-import React, { useState, useEffect, useRef } from "react";
+// import React, { useState, useEffect, useRef } from "react";
+
+// function App() {
+//   const value = useRef();
+//   const btnClicked = () => {
+//     console.log(value.current);
+//     value.current.style.backgroundColor = "red"
+//   };
+//   return (
+//     <>
+//       <input type="text" ref={value} />
+//       <button onClick={btnClicked}>Click</button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// import React, { useState, useEffect, useRef, useMemo } from "react";
+// import Header from "./Components/Header.jsx"
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <>
+//       <Header/>
+
+//       <h1>{count}</h1>
+//       <button
+//         onClick={() => {
+//           setCount(count + 1);
+//         }}
+//       >
+//         Click here!
+//       </button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+//UseContext Hook
+import React, { useState } from "react";
+import Profile from "./Components/Profile";
 
 function App() {
-  const value = useRef();
-  const btnClicked = () => {
-    console.log(value.current);
-    value.current.style.backgroundColor = "red"
-  };
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <input type="text" ref={value} />
-      <button onClick={btnClicked}>Click</button>
+      <Profile />
+      <h2>Hello</h2> 
     </>
   );
 }
